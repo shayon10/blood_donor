@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<title>Donor Registration Form</title>
+</head>
+<body>
+<h2>Donor Registration Form</h2>
+<form method="post" action="process_form.php">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error" id="nameError"></span>
+    </div>
+    <div>
+        <label for="nid">NID:</label>
+        <input type="text" id="nid" name="nid" required>
+        <span class="error" id="nidError"></span>
+    </div>
+    <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <span class="error" id="dobError"></span>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="emailError"></span>
+    </div>
+    <div>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <span class="error" id="genderError"></span>
+    </div>
+    <div>
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+        <span class="error" id="contactError"></span>
+    </div>
+    <div>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+        <span class="error" id="addressError"></span>
+    </div>
+    <div>
+        <label for="bloodType">Blood Type:</label>
+        <select id="bloodType" name="bloodType" required>
+            <option value="">Select Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <span class="error" id="bloodTypeError"></span>
+    </div>
+    <div>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required>
+        <span class="error" id="heightError"></span>
+    </div>
+    <div>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required>
+        <span class="error" id="weightError"></span>
+    </div>
+    <div>
+        <label for="allergy">Allergy Details:</label>
+        <textarea id="allergy" name="allergy" rows="3" required></textarea>
+        <span class="error" id="allergyError"></span>
+    </div>
+    <div>
+        <label for="diseaseHistory">Serious Disease History:</label>
+        <textarea id="diseaseHistory" name="diseaseHistory" rows="3" required></textarea>
+        <span class="error" id="diseaseHistoryError"></span>
+    </div>
+    <div>
+        <label for="anemia">Has Anemia?</label>
+        <input type="radio" id="anemiaYes" name="anemia" value="yes" required>
+        <label for="anemiaYes">Yes</label>
+        <input type="radio" id="anemiaNo" name="anemia" value="no">
+        <label for="anemiaNo">No</label>
+        <span class="error" id="anemiaError"></span>
+    </div>
+    <div>
+        <label for="cardiac">Cardiac Patient?</label>
+        <input type="radio" id="cardiacYes" name="cardiac" value="yes" required>
+        <label for="cardiacYes">Yes</label>
+        <input type="radio" id="cardiacNo" name="cardiac" value="no">
+        <label for="cardiacNo">No</label>
+        <span class="error" id="cardiacError"></span>
+    </div>
+    <div>
+        <label for="medication">Under Medication?</label>
+        <input type="radio" id="medicationYes" name="medication" value="yes" required>
+        <label for="medicationYes">Yes</label>
+        <input type="radio" id="medicationNo" name="medication" value="no">
+        <label for="medicationNo">No</label>
+        <span class="error" id="medicationError"></span>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error" id="passwordError"></span>
+    </div>
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span class="error" id="confirmPasswordError"></span>
+    </div>
+    <button type="submit">Submit</button>
+    <div id="successMessage" class="success-message hidden">
+        <h2>Congratulations!!!</h2>
+        <p>You are a blood donor now!!!</p>
+        <button onclick="window.location.href='http://yourwebsite.com'" class="visit-website-btn">Visit our Website</button>
+    </div>
+</form>
+<script>
+    // JavaScript validation
+    // You can implement JavaScript validation for enhanced user experience.
+</script>
+</body>
+</html>
